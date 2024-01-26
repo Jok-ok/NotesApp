@@ -1,0 +1,2 @@
+protocol NoteListModuleOutput: AnyObject { }
+
