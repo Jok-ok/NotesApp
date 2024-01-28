@@ -22,6 +22,10 @@
 		FA0C50672B63D0EF00E567D4 /* NoteListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50662B63D0EF00E567D4 /* NoteListRouterInput.swift */; };
 		FA0C50692B63D16A00E567D4 /* NoteListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50682B63D16A00E567D4 /* NoteListModuleOutput.swift */; };
 		FA0C506C2B63D28700E567D4 /* NoteListPresenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C506B2B63D28700E567D4 /* NoteListPresenterModel.swift */; };
+		FA0C506F2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C506E2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift */; };
+		FA0C50712B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50702B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift */; };
+		FA0C50742B657EE800E567D4 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50732B657EE800E567D4 /* NoteCollectionViewCell.swift */; };
+		FA0C50762B65861000E567D4 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50752B65860F00E567D4 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		FA0C50662B63D0EF00E567D4 /* NoteListRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListRouterInput.swift; sourceTree = "<group>"; };
 		FA0C50682B63D16A00E567D4 /* NoteListModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListModuleOutput.swift; sourceTree = "<group>"; };
 		FA0C506B2B63D28700E567D4 /* NoteListPresenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListPresenterModel.swift; sourceTree = "<group>"; };
+		FA0C506E2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		FA0C50702B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewAdapterOutput.swift; sourceTree = "<group>"; };
+		FA0C50732B657EE800E567D4 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA0C50752B65860F00E567D4 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,7 @@
 		FA0C50562B63CAF800E567D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C506D2B657B4F00E567D4 /* NoteCollectionViewAdapter */,
 				FA0C503F2B63CA8A00E567D4 /* NoteListViewController.swift */,
 				FA0C50622B63D0C500E567D4 /* NoteListViewInput.swift */,
 				FA0C50642B63D0D400E567D4 /* NoteListViewOutput.swift */,
@@ -154,6 +163,7 @@
 				FA0C50552B63CAEB00E567D4 /* Presenter */,
 				FA0C50572B63CAFD00E567D4 /* Router */,
 				FA0C50562B63CAF800E567D4 /* View */,
+				FA0C50752B65860F00E567D4 /* Note.swift */,
 			);
 			path = NoteList;
 			sourceTree = "<group>";
@@ -164,6 +174,24 @@
 				FA0C506B2B63D28700E567D4 /* NoteListPresenterModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA0C506D2B657B4F00E567D4 /* NoteCollectionViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C50722B657ED200E567D4 /* NoteCollectionViewCell */,
+				FA0C506E2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift */,
+				FA0C50702B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift */,
+			);
+			path = NoteCollectionViewAdapter;
+			sourceTree = "<group>";
+		};
+		FA0C50722B657ED200E567D4 /* NoteCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C50732B657EE800E567D4 /* NoteCollectionViewCell.swift */,
+			);
+			path = NoteCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,14 +264,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0C50712B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift in Sources */,
 				FA0C50402B63CA8A00E567D4 /* NoteListViewController.swift in Sources */,
 				FA0C50632B63D0C500E567D4 /* NoteListViewInput.swift in Sources */,
 				FA0C503C2B63CA8A00E567D4 /* AppDelegate.swift in Sources */,
+				FA0C50742B657EE800E567D4 /* NoteCollectionViewCell.swift in Sources */,
 				FA0C503E2B63CA8A00E567D4 /* SceneDelegate.swift in Sources */,
+				FA0C506F2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift in Sources */,
 				FA0C505B2B63D03C00E567D4 /* NoteListConfigurator.swift in Sources */,
 				FA0C50652B63D0D400E567D4 /* NoteListViewOutput.swift in Sources */,
 				FA0C50612B63D0A200E567D4 /* NoteListModuleInput.swift in Sources */,
 				FA0C50672B63D0EF00E567D4 /* NoteListRouterInput.swift in Sources */,
+				FA0C50762B65861000E567D4 /* Note.swift in Sources */,
 				FA0C505D2B63D04D00E567D4 /* NoteListRouter.swift in Sources */,
 				FA0C505F2B63D06400E567D4 /* NoteListPresenter.swift in Sources */,
 				FA0C50692B63D16A00E567D4 /* NoteListModuleOutput.swift in Sources */,

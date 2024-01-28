@@ -1,0 +1,3 @@
+protocol NoteCollectionViewAdapterOutput {
+    func DidSelectNoteView()
+}

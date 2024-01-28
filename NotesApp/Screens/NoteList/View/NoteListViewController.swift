@@ -19,3 +19,6 @@ private extension NoteListViewController {
     }
 }
 
+private extension NoteListViewController {
+    
+}
