@@ -5,6 +5,7 @@ final class NoteCollectionViewAdapter: NSObject {
     
     private let output: NoteCollectionViewAdapterOutput
     private var items: [Note]
+    private var deleteMode = false
     
     private var collectionView: UICollectionView
     
@@ -19,8 +20,14 @@ final class NoteCollectionViewAdapter: NSObject {
         setupCollection()
     }
     
-    func configure(with items: [Note]) {
+    func configure(with items: [Note], deleteMode: Bool = false) {
         self.items = items
+        self.deleteMode = deleteMode
+        collectionView.reloadData()
+    }
+    
+    func setDeleteMode(_ deleteMode: Bool) {
+        self.deleteMode = deleteMode
         collectionView.reloadData()
     }
     
@@ -49,11 +56,11 @@ extension NoteCollectionViewAdapter: UICollectionViewDataSource {
         
         cell.configure(with: items[indexPath.item].title ?? "",
                        text: items[indexPath.item].text ?? "",
-                       updatedAt: items[indexPath.item].updatedAt ?? .now)
+                       updatedAt: items[indexPath.item].updatedAt ?? .now, deleteButtonIsHidden: !deleteMode)
+        cell.deleteDelegate = self
         
         return cell
     }
-    
     
 }
 
@@ -63,4 +70,17 @@ extension NoteCollectionViewAdapter: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: true)
         output.didSelectNoteView(items[indexPath.item])
     }
+}
+
+extension NoteCollectionViewAdapter: NoteCollectionViewCellDeleteDelegate {
+    func delete(cell: NoteCollectionViewCell) {
+        guard let indexPath = collectionView.indexPath(for: cell) else { return }
+        
+        output.didDeleteNote(items[indexPath.item])
+        
+        items.remove(at: indexPath.item)
+        
+        collectionView.deleteItems(at: [indexPath])
+    }
+    
 }

@@ -1,4 +1,5 @@
 final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
+    
     // MARK: - Public properties
     weak var view: NoteListViewInput?
     var router: NoteListRouterInput?
@@ -6,6 +7,7 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
     var model: NoteListDataModel?
     
     // MARK: - Private properties
+    private var noteEditingMode = false
     private var ascendingOrder = false
     
     // MARK: - NoteListViewOutput
@@ -32,6 +34,15 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
     func addNoteButtonDidTap() {
         router?.showAddNoteAlertModule(output: self)
         fetchNotes()
+    }
+    
+    func deleteNoteButtonTap(_ note: Note) {
+        model?.deleteNote(note)
+    }
+    
+    func deleteNotesButtonDidTap() {
+        noteEditingMode.toggle()
+        view?.setCollectionViewToDeleteMode(noteEditingMode)
     }
 }
 

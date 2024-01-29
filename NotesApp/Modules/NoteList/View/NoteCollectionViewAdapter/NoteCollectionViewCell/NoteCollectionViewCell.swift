@@ -1,10 +1,14 @@
 import UIKit
 
 final class NoteCollectionViewCell: UICollectionViewCell {
-    let titleLabel = UILabel()
-    let divider = UIView()
-    let textLabel = UILabel()
-    let updatedAtLabel = UILabel()
+    // MARK: - Private properties
+    private let titleLabel = UILabel()
+    private let divider = UIView()
+    private let textLabel = UILabel()
+    private let updatedAtLabel = UILabel()
+    private let deleteNoteButton = UIButton()
+    
+    var deleteDelegate: NoteCollectionViewCellDeleteDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -15,7 +19,7 @@ final class NoteCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with title: String, text: String, updatedAt: Date) {
+    func configure(with title: String, text: String, updatedAt: Date, deleteButtonIsHidden: Bool = false) {
         titleLabel.text = title
         textLabel.text = text
         
@@ -24,6 +28,15 @@ final class NoteCollectionViewCell: UICollectionViewCell {
         formatter.timeStyle = .short
         
         updatedAtLabel.text = formatter.string(from: updatedAt)
+        
+        let deleteAction = UIAction { [weak self] action in
+            guard let self = self else { return }
+            self.deleteDelegate?.delete(cell: self)
+        }
+        
+        deleteNoteButton.addAction(deleteAction, for: .touchUpInside)
+        
+        deleteNoteButton.isHidden = deleteButtonIsHidden
     }
 }
 
@@ -33,32 +46,42 @@ private extension NoteCollectionViewCell {
         backgroundColor = .noteBackground
         layer.cornerRadius = 10
         layer.shadowOffset = .init(width: 2, height: 4)
-        layer.shadowOpacity = 0.15
+        layer.shadowOpacity = 0.1
         layer.shadowColor = UIColor.black.cgColor
         
         configureTitleLabelAppearance()
+        configureDeleteNoteButton()
         configureDivider()
         configureShortLabelAppearance()
         configureUpdatedAtLabel()
 
         addSubview(titleLabel)
+        addSubview(deleteNoteButton)
         addSubview(divider)
         addSubview(textLabel)
         addSubview(updatedAtLabel)
         
         constraintTitleLabel()
+        constraintDeleteNoteButton()
         constraintDivider()
         constraintShortLabel()
         constraintUpdatedAtLabel()
     }
     
     func configureTitleLabelAppearance() {
-        titleLabel.font = .boldSystemFont(ofSize: 24)
+        titleLabel.font = .boldSystemFont(ofSize: 20)
         titleLabel.textColor = .font
         
         titleLabel.lineBreakMode = .byTruncatingTail
         titleLabel.numberOfLines = 1
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    func configureDeleteNoteButton() {
+        deleteNoteButton.setImage(.init(systemName: "xmark"), for: .normal)
+        deleteNoteButton.tintColor = .red
+        
+        deleteNoteButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
     func configureDivider() {
@@ -68,7 +91,7 @@ private extension NoteCollectionViewCell {
     }
     
     func configureShortLabelAppearance() {
-        textLabel.font = .systemFont(ofSize: 16)
+        textLabel.font = .systemFont(ofSize: 14)
         textLabel.textColor = .font
         
         textLabel.numberOfLines = 3
@@ -90,6 +113,15 @@ private extension NoteCollectionViewCell {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    func constraintDeleteNoteButton() {
+        let constraints = [
+            deleteNoteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            deleteNoteButton.topAnchor.constraint(equalTo: topAnchor, constant: 10)
         ]
         
         NSLayoutConstraint.activate(constraints)

@@ -10,4 +10,8 @@ protocol NoteListViewOutput {
     func toggleSortInAscendingOrder()
     
     func addNoteButtonDidTap()
+    
+    func deleteNoteButtonTap(_ note: Note)
+    
+    func deleteNotesButtonDidTap()
 }
