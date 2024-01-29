@@ -1,13 +1,16 @@
 final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
+    // MARK: - Public properties
     weak var view: NoteListViewInput?
     var router: NoteListRouterInput?
     var output: NoteListModuleOutput?
     var model: NoteListDataModel?
+    
+    // MARK: - Private properties
     private var ascendingOrder = false
     
+    // MARK: - NoteListViewOutput
     func viewDidLoad() {
         view?.setupInitialState(model: NoteListPresenterModel())
-//        addNote(title: "SomeTitle", text: "LoremIpsumText LoremIpsumText LoremIpsumText LoremIpsumText LoremIpsumText LoremIpsumText")
         fetchNotes()
     }
     
@@ -18,7 +21,7 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
     }
     
     func noteDidTap(_ note: Note) {
-        
+        router?.showNoteDetailModule()
     }
     
     func toggleSortInAscendingOrder() {
@@ -26,9 +29,16 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
         fetchNotes()
     }
     
-    func addNote() {
-        
-//        model?.addNote(title: title, text: text, updatedAt: .now)
+    func addNoteButtonDidTap() {
+        router?.showAddNoteAlertModule(output: self)
+        fetchNotes()
+    }
+}
+
+// MARK: - AddNoteModelOutput
+extension NoteListPresenter: AddNoteAlertModuleOutput {
+    func addNote(with title: String) {
+        model?.addNote(title: title, text: "", updatedAt: .now)
         fetchNotes()
     }
 }

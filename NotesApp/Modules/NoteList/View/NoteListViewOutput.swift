@@ -9,5 +9,5 @@ protocol NoteListViewOutput {
     
     func toggleSortInAscendingOrder()
     
-    func addNote()
+    func addNoteButtonDidTap()
 }
