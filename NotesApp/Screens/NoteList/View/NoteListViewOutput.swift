@@ -3,5 +3,11 @@ import Foundation
 protocol NoteListViewOutput {
     func viewDidLoad()
     
-    func noteDidTap()
+    func fetchNotes()
+    
+    func noteDidTap(_ note: Note)
+    
+    func toggleSortInAscendingOrder()
+    
+    func addNote()
 }

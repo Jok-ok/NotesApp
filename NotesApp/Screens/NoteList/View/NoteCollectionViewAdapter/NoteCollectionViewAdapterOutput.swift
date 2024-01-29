@@ -1,3 +1,3 @@
 protocol NoteCollectionViewAdapterOutput {
-    func DidSelectNoteView()
+    func didSelectNoteView(_ note: Note)
 }

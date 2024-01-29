@@ -4,29 +4,52 @@ final class NoteCollectionViewCell: UICollectionViewCell {
     let titleLabel = UILabel()
     let divider = UIView()
     let textLabel = UILabel()
+    let updatedAtLabel = UILabel()
     
-    func configure(with title: String, text: String) {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureAppearance()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(with title: String, text: String, updatedAt: Date) {
         titleLabel.text = title
         textLabel.text = text
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        
+        updatedAtLabel.text = formatter.string(from: updatedAt)
     }
 }
 
 // MARK: Appearance
 private extension NoteCollectionViewCell {
     func configureAppearance() {
-        backgroundColor = .background
+        backgroundColor = .noteBackground
         layer.cornerRadius = 10
+        layer.shadowOffset = .init(width: 2, height: 4)
+        layer.shadowOpacity = 0.15
+        layer.shadowColor = UIColor.black.cgColor
         
         configureTitleLabelAppearance()
-        configureShortLabelAppearance()
         configureDivider()
-        
+        configureShortLabelAppearance()
+        configureUpdatedAtLabel()
+
         addSubview(titleLabel)
         addSubview(divider)
         addSubview(textLabel)
+        addSubview(updatedAtLabel)
         
         constraintTitleLabel()
+        constraintDivider()
         constraintShortLabel()
+        constraintUpdatedAtLabel()
     }
     
     func configureTitleLabelAppearance() {
@@ -39,7 +62,7 @@ private extension NoteCollectionViewCell {
     }
     
     func configureDivider() {
-        divider.backgroundColor = .black
+        divider.backgroundColor = .noteDivider
         divider.layer.cornerRadius = 2
         divider.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -48,17 +71,25 @@ private extension NoteCollectionViewCell {
         textLabel.font = .systemFont(ofSize: 16)
         textLabel.textColor = .font
         
-        textLabel.numberOfLines = 2
+        textLabel.numberOfLines = 3
         textLabel.lineBreakMode = .byTruncatingTail
         textLabel.translatesAutoresizingMaskIntoConstraints = false
-        
     }
+    
+    func configureUpdatedAtLabel() {
+        updatedAtLabel.font = .systemFont(ofSize: 12)
+        updatedAtLabel.textColor = .secondaryText
+        
+        updatedAtLabel.numberOfLines = 1
+        updatedAtLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     // MARK: - Constraints
     func constraintTitleLabel() {
         let constraints = [
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -66,10 +97,10 @@ private extension NoteCollectionViewCell {
     
     func constraintDivider() {
         let constraints = [
-            divider.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            divider.leadingAnchor.constraint(equalTo: leadingAnchor),
             divider.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
-            divider.heightAnchor.constraint(equalToConstant: 3),
-            divider.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+            divider.heightAnchor.constraint(equalToConstant: 1),
+            divider.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -78,8 +109,17 @@ private extension NoteCollectionViewCell {
     func constraintShortLabel() {
         let constraints = [
             textLabel.topAnchor.constraint(equalTo: divider.bottomAnchor, constant: 5),
-            textLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10)
+            textLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            textLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        ]
+        
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    func constraintUpdatedAtLabel() {
+        let constraints = [
+            updatedAtLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            updatedAtLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
         ]
         
         NSLayoutConstraint.activate(constraints)
