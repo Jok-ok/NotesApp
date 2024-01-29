@@ -4,7 +4,7 @@ class NoteListViewController: UIViewController, NoteListViewInput {
     
     var output: NoteListViewOutput?
     
-    // MARK: - Private params
+    // MARK: - Private parameters
     private var collectionViewAdapter: NoteCollectionViewAdapter?
     private var collectionView: UICollectionView?
 
@@ -63,8 +63,9 @@ private extension NoteListViewController {
 //MARK: - Actions
 private extension NoteListViewController {
     @objc func addNote() {
-        output?.addNote()
+        output?.addNoteButtonDidTap()
     }
+    
     @objc func reverseNotesSort() {
         output?.toggleSortInAscendingOrder()
     }

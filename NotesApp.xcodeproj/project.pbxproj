@@ -28,6 +28,9 @@
 		FAA3F4912B6705B6004747D7 /* NoteListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4902B6705B6004747D7 /* NoteListDataModel.swift */; };
 		FAA3F4932B6705CB004747D7 /* NoteListDataModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4922B6705CB004747D7 /* NoteListDataModelInput.swift */; };
 		FAA3F4962B670B9F004747D7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4952B670B9F004747D7 /* CoreDataStack.swift */; };
+		FAA3F4992B680640004747D7 /* AddNoteAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */; };
+		FAA3F49B2B680668004747D7 /* AddNoteAlertModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */; };
+		FAA3F49E2B68092C004747D7 /* AddNoteAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		FAA3F4902B6705B6004747D7 /* NoteListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListDataModel.swift; sourceTree = "<group>"; };
 		FAA3F4922B6705CB004747D7 /* NoteListDataModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListDataModelInput.swift; sourceTree = "<group>"; };
 		FAA3F4952B670B9F004747D7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertController.swift; sourceTree = "<group>"; };
+		FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModuleOutput.swift; sourceTree = "<group>"; };
+		FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +94,7 @@
 			children = (
 				FAA3F4942B670B90004747D7 /* Support */,
 				FA0C50522B63CAA400E567D4 /* App */,
-				FA0C50542B63CADB00E567D4 /* Screens */,
+				FA0C50542B63CADB00E567D4 /* Modules */,
 				FA0C50532B63CACB00E567D4 /* Resources */,
 			);
 			path = NotesApp;
@@ -114,12 +120,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		FA0C50542B63CADB00E567D4 /* Screens */ = {
+		FA0C50542B63CADB00E567D4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				FA0C50592B63CB8400E567D4 /* NoteList */,
+				FAA3F4972B68060C004747D7 /* AddNoteAlert */,
 			);
-			path = Screens;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		FA0C50552B63CAEB00E567D4 /* Presenter */ = {
@@ -208,6 +215,24 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		FAA3F4972B68060C004747D7 /* AddNoteAlert */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F49C2B68090C004747D7 /* Model */,
+				FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */,
+				FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */,
+			);
+			path = AddNoteAlert;
+			sourceTree = "<group>";
+		};
+		FAA3F49C2B68090C004747D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +309,7 @@
 				FA0C50632B63D0C500E567D4 /* NoteListViewInput.swift in Sources */,
 				FA0C503C2B63CA8A00E567D4 /* AppDelegate.swift in Sources */,
 				FA0C50742B657EE800E567D4 /* NoteCollectionViewCell.swift in Sources */,
+				FAA3F4992B680640004747D7 /* AddNoteAlertController.swift in Sources */,
 				FA0C503E2B63CA8A00E567D4 /* SceneDelegate.swift in Sources */,
 				FA0C506F2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift in Sources */,
 				FAA3F4962B670B9F004747D7 /* CoreDataStack.swift in Sources */,
@@ -292,6 +318,8 @@
 				FA0C50612B63D0A200E567D4 /* NoteListModuleInput.swift in Sources */,
 				FA0C50672B63D0EF00E567D4 /* NoteListRouterInput.swift in Sources */,
 				FA0C505D2B63D04D00E567D4 /* NoteListRouter.swift in Sources */,
+				FAA3F49B2B680668004747D7 /* AddNoteAlertModuleOutput.swift in Sources */,
+				FAA3F49E2B68092C004747D7 /* AddNoteAlertModel.swift in Sources */,
 				FA0C505F2B63D06400E567D4 /* NoteListPresenter.swift in Sources */,
 				FA0C50692B63D16A00E567D4 /* NoteListModuleOutput.swift in Sources */,
 				FA0C50462B63CA8A00E567D4 /* NotesApp.xcdatamodeld in Sources */,
@@ -447,6 +475,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,6 +503,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
