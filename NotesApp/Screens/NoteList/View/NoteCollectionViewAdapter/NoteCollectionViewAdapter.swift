@@ -19,7 +19,6 @@ final class NoteCollectionViewAdapter: NSObject {
         setupCollection()
     }
     
-    
     func configure(with items: [Note]) {
         self.items = items
         collectionView.reloadData()
@@ -33,7 +32,7 @@ final class NoteCollectionViewAdapter: NSObject {
         collectionView.register(
             NoteCollectionViewCell.self,
             forCellWithReuseIdentifier: .init(describing: NoteCollectionViewCell.self))
-        
+    
     }
 }
 
@@ -48,8 +47,9 @@ extension NoteCollectionViewAdapter: UICollectionViewDataSource {
             withReuseIdentifier: .init(describing: NoteCollectionViewCell.self),
             for: indexPath) as? NoteCollectionViewCell else { return UICollectionViewCell()}
         
-        cell.configure(with: items[indexPath.item].title, 
-                       text: items[indexPath.item].text)
+        cell.configure(with: items[indexPath.item].title ?? "",
+                       text: items[indexPath.item].text ?? "",
+                       updatedAt: items[indexPath.item].updatedAt ?? .now)
         
         return cell
     }
@@ -59,5 +59,8 @@ extension NoteCollectionViewAdapter: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension NoteCollectionViewAdapter: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        output.didSelectNoteView(items[indexPath.item])
+    }
 }
