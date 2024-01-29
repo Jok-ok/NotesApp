@@ -22,6 +22,10 @@ class NoteListViewController: UIViewController, NoteListViewInput {
     func updateNotes(with notes: [Note]) {
         collectionViewAdapter?.configure(with: notes)
     }
+    
+    func setCollectionViewToDeleteMode(_ deleteMode: Bool) {
+        collectionViewAdapter?.setDeleteMode(deleteMode)
+    }
 }
 
 // MARK: - Appearance
@@ -41,8 +45,16 @@ private extension NoteListViewController {
     func configureNavigationController(with navigationBarTitle: String, sortButtonTitle: String) {
         title = navigationBarTitle
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addNote))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: sortButtonTitle, style: .plain, target: self, action: #selector(reverseNotesSort))
+        let addNoteButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addNoteButtonDidTap))
+        let deleteNotesButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteNotesButtonDidTap))
+        
+        addNoteButtonItem.tintColor = .systemBlue
+        deleteNotesButtonItem.tintColor = .systemRed
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: sortButtonTitle, style: .plain, target: self, action: #selector(reverseNotesSortButtonDidTap))
+        
+        navigationItem.rightBarButtonItems = [addNoteButtonItem, deleteNotesButtonItem]
+        
         navigationItem.rightBarButtonItem?.tintColor = .systemBlue
         navigationItem.leftBarButtonItem?.tintColor = .systemBlue
     }
@@ -62,12 +74,16 @@ private extension NoteListViewController {
 
 //MARK: - Actions
 private extension NoteListViewController {
-    @objc func addNote() {
+    @objc func addNoteButtonDidTap() {
         output?.addNoteButtonDidTap()
     }
     
-    @objc func reverseNotesSort() {
+    @objc func reverseNotesSortButtonDidTap() {
         output?.toggleSortInAscendingOrder()
+    }
+    
+    @objc func deleteNotesButtonDidTap() {
+        output?.deleteNotesButtonDidTap()
     }
 }
 
@@ -88,7 +104,7 @@ private extension NoteListViewController {
             layoutSize: .init(
                 widthDimension: .fractionalWidth(0.5),
                 heightDimension: .fractionalHeight(1)))
-        item.contentInsets = .init(top: 5, leading: 5, bottom: 5, trailing: 5)
+        item.contentInsets = .init(top: 10, leading: 10, bottom: 10, trailing: 10)
         
         let group = NSCollectionLayoutGroup.horizontal(
             layoutSize: .init(
@@ -105,6 +121,10 @@ private extension NoteListViewController {
 }
 // MARK: CollectionViewAdapterOutput
 extension NoteListViewController: NoteCollectionViewAdapterOutput {
+    func didDeleteNote(_ note: Note) {
+        output?.deleteNoteButtonTap(note)
+    }
+    
     func didSelectNoteView(_ note: Note) {
         output?.noteDidTap(note)
     }

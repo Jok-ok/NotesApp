@@ -31,6 +31,7 @@
 		FAA3F4992B680640004747D7 /* AddNoteAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */; };
 		FAA3F49B2B680668004747D7 /* AddNoteAlertModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */; };
 		FAA3F49E2B68092C004747D7 /* AddNoteAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */; };
+		FAA3F4A02B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertController.swift; sourceTree = "<group>"; };
 		FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModuleOutput.swift; sourceTree = "<group>"; };
 		FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModel.swift; sourceTree = "<group>"; };
+		FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCellDeleteDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0C50732B657EE800E567D4 /* NoteCollectionViewCell.swift */,
+				FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */,
 			);
 			path = NoteCollectionViewCell;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				FA0C503C2B63CA8A00E567D4 /* AppDelegate.swift in Sources */,
 				FA0C50742B657EE800E567D4 /* NoteCollectionViewCell.swift in Sources */,
 				FAA3F4992B680640004747D7 /* AddNoteAlertController.swift in Sources */,
+				FAA3F4A02B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift in Sources */,
 				FA0C503E2B63CA8A00E567D4 /* SceneDelegate.swift in Sources */,
 				FA0C506F2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift in Sources */,
 				FAA3F4962B670B9F004747D7 /* CoreDataStack.swift in Sources */,
