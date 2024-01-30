@@ -26,6 +26,15 @@ class NoteListViewController: UIViewController, NoteListViewInput {
     func setCollectionViewToDeleteMode(_ deleteMode: Bool) {
         collectionViewAdapter?.setDeleteMode(deleteMode)
     }
+    
+    func setTrashButtonState(with active: Bool) {
+        if active {
+            navigationItem.rightBarButtonItems?[1].tintColor = .red
+        } else
+        {
+            navigationItem.rightBarButtonItems?[1].tintColor = .accent
+        }
+    }
 }
 
 // MARK: - Appearance
@@ -48,15 +57,9 @@ private extension NoteListViewController {
         let addNoteButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addNoteButtonDidTap))
         let deleteNotesButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteNotesButtonDidTap))
         
-        addNoteButtonItem.tintColor = .systemBlue
-        deleteNotesButtonItem.tintColor = .systemRed
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: sortButtonTitle, style: .plain, target: self, action: #selector(reverseNotesSortButtonDidTap))
         
         navigationItem.rightBarButtonItems = [addNoteButtonItem, deleteNotesButtonItem]
-        
-        navigationItem.rightBarButtonItem?.tintColor = .systemBlue
-        navigationItem.leftBarButtonItem?.tintColor = .systemBlue
     }
     
     func constraintCollectionView() {

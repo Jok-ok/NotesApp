@@ -42,11 +42,13 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
     
     func deleteNotesButtonDidTap() {
         noteDeletingMode.toggle()
+        view?.setTrashButtonState(with: noteDeletingMode)
         view?.setCollectionViewToDeleteMode(noteDeletingMode)
     }
     
     func collectionViewItemsBecomeEmpty() {
         noteDeletingMode = false
+        view?.setTrashButtonState(with: noteDeletingMode)
         view?.setCollectionViewToDeleteMode(noteDeletingMode)
     }
 }
