@@ -121,6 +121,10 @@ private extension NoteListViewController {
 }
 // MARK: CollectionViewAdapterOutput
 extension NoteListViewController: NoteCollectionViewAdapterOutput {
+    func collectionViewItemsBecomeEmpty() {
+        output?.collectionViewItemsBecomeEmpty()
+    }
+    
     func didDeleteNote(_ note: Note) {
         output?.deleteNoteButtonTap(note)
     }
