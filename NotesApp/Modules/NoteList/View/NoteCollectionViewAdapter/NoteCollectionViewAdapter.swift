@@ -67,6 +67,7 @@ extension NoteCollectionViewAdapter: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension NoteCollectionViewAdapter: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if deleteMode { return }
         collectionView.deselectItem(at: indexPath, animated: true)
         output.didSelectNoteView(items[indexPath.item])
     }

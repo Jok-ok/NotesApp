@@ -56,7 +56,7 @@ private extension NoteCollectionViewCell {
         layer.cornerRadius = 10
         layer.shadowOffset = .init(width: 2, height: 4)
         layer.shadowOpacity = 0.1
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.noteShadow.cgColor
         
         configureTitleLabelAppearance()
         configureDeleteNoteButton()
