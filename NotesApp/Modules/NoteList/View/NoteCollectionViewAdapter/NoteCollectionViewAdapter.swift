@@ -20,9 +20,8 @@ final class NoteCollectionViewAdapter: NSObject {
         setupCollection()
     }
     
-    func configure(with items: [Note], deleteMode: Bool = false) {
+    func configure(with items: [Note]) {
         self.items = items
-        self.deleteMode = deleteMode
         collectionView.reloadData()
     }
     
@@ -39,7 +38,6 @@ final class NoteCollectionViewAdapter: NSObject {
         collectionView.register(
             NoteCollectionViewCell.self,
             forCellWithReuseIdentifier: .init(describing: NoteCollectionViewCell.self))
-    
     }
 }
 
@@ -73,6 +71,7 @@ extension NoteCollectionViewAdapter: UICollectionViewDelegate {
     }
 }
 
+// MARK: - NoteCollectionViewCellDeleteDelegate
 extension NoteCollectionViewAdapter: NoteCollectionViewCellDeleteDelegate {
     func delete(cell: NoteCollectionViewCell) {
         guard let indexPath = collectionView.indexPath(for: cell) else { return }
@@ -82,6 +81,10 @@ extension NoteCollectionViewAdapter: NoteCollectionViewCellDeleteDelegate {
         items.remove(at: indexPath.item)
         
         collectionView.deleteItems(at: [indexPath])
+        
+        if items.isEmpty {
+            output.collectionViewItemsBecomeEmpty()
+        }
     }
     
 }
