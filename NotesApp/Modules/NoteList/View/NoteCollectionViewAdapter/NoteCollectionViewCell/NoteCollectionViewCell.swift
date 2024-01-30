@@ -20,7 +20,7 @@ final class NoteCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with title: String, text: String, updatedAt: Date, deleteButtonIsHidden: Bool = false) {
-        titleLabel.text = title
+        titleLabel.text = title == "" ? " " : title
         textLabel.text = text
         
         let formatter = DateFormatter()
@@ -35,8 +35,17 @@ final class NoteCollectionViewCell: UICollectionViewCell {
         }
         
         deleteNoteButton.addAction(deleteAction, for: .touchUpInside)
-        
         deleteNoteButton.isHidden = deleteButtonIsHidden
+        if !deleteButtonIsHidden {
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                self?.deleteNoteButton.alpha = 1
+            }
+        }
+        else if deleteNoteButton.alpha == 1 {
+            UIView.animate(withDuration: 0.5) { [weak self] in
+                self?.deleteNoteButton.alpha = 0
+            }
+        }
     }
 }
 
@@ -79,7 +88,8 @@ private extension NoteCollectionViewCell {
     
     func configureDeleteNoteButton() {
         deleteNoteButton.setImage(.init(systemName: "xmark"), for: .normal)
-        deleteNoteButton.tintColor = .red
+        deleteNoteButton.tintColor = .deleteMark
+        deleteNoteButton.alpha = 0
         
         deleteNoteButton.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -112,7 +122,7 @@ private extension NoteCollectionViewCell {
         let constraints = [
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            titleLabel.trailingAnchor.constraint(equalTo: deleteNoteButton.leadingAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)
@@ -121,7 +131,8 @@ private extension NoteCollectionViewCell {
     func constraintDeleteNoteButton() {
         let constraints = [
             deleteNoteButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            deleteNoteButton.topAnchor.constraint(equalTo: topAnchor, constant: 10)
+            deleteNoteButton.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            deleteNoteButton.widthAnchor.constraint(equalTo: deleteNoteButton.heightAnchor)
         ]
         
         NSLayoutConstraint.activate(constraints)
