@@ -32,6 +32,15 @@
 		FAA3F49B2B680668004747D7 /* AddNoteAlertModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */; };
 		FAA3F49E2B68092C004747D7 /* AddNoteAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */; };
 		FAA3F4A02B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */; };
+		FAA3F4A72B68C36B004747D7 /* NoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4A62B68C36B004747D7 /* NoteEditViewController.swift */; };
+		FAA3F4A92B68C38F004747D7 /* NoteEditModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4A82B68C38F004747D7 /* NoteEditModuleConfigurator.swift */; };
+		FAA3F4AB2B68C3AD004747D7 /* NoteEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4AA2B68C3AD004747D7 /* NoteEditPresenter.swift */; };
+		FAA3F4AD2B68C3C3004747D7 /* NoteEditRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4AC2B68C3C3004747D7 /* NoteEditRouter.swift */; };
+		FAA3F4AF2B68C453004747D7 /* NoteEditViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4AE2B68C453004747D7 /* NoteEditViewInput.swift */; };
+		FAA3F4B12B68C462004747D7 /* NoteEditViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B02B68C462004747D7 /* NoteEditViewOutput.swift */; };
+		FAA3F4B32B68C4CB004747D7 /* NoteEditRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */; };
+		FAA3F4B52B68C4EA004747D7 /* NoteEditModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */; };
+		FAA3F4B72B68C4F9004747D7 /* NoteEditModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +71,15 @@
 		FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModuleOutput.swift; sourceTree = "<group>"; };
 		FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModel.swift; sourceTree = "<group>"; };
 		FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCellDeleteDelegate.swift; sourceTree = "<group>"; };
+		FAA3F4A62B68C36B004747D7 /* NoteEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewController.swift; sourceTree = "<group>"; };
+		FAA3F4A82B68C38F004747D7 /* NoteEditModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleConfigurator.swift; sourceTree = "<group>"; };
+		FAA3F4AA2B68C3AD004747D7 /* NoteEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPresenter.swift; sourceTree = "<group>"; };
+		FAA3F4AC2B68C3C3004747D7 /* NoteEditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditRouter.swift; sourceTree = "<group>"; };
+		FAA3F4AE2B68C453004747D7 /* NoteEditViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewInput.swift; sourceTree = "<group>"; };
+		FAA3F4B02B68C462004747D7 /* NoteEditViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewOutput.swift; sourceTree = "<group>"; };
+		FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditRouterInput.swift; sourceTree = "<group>"; };
+		FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleInput.swift; sourceTree = "<group>"; };
+		FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +145,7 @@
 			children = (
 				FA0C50592B63CB8400E567D4 /* NoteList */,
 				FAA3F4972B68060C004747D7 /* AddNoteAlert */,
+				FAA3F4A12B68C289004747D7 /* NoteEdit */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -236,6 +255,54 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FAA3F4A12B68C289004747D7 /* NoteEdit */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4A22B68C2A6004747D7 /* Configurator */,
+				FAA3F4A32B68C2B1004747D7 /* Presenter */,
+				FAA3F4A52B68C2BD004747D7 /* Router */,
+				FAA3F4A42B68C2B7004747D7 /* View */,
+			);
+			path = NoteEdit;
+			sourceTree = "<group>";
+		};
+		FAA3F4A22B68C2A6004747D7 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4A82B68C38F004747D7 /* NoteEditModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		FAA3F4A32B68C2B1004747D7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4AA2B68C3AD004747D7 /* NoteEditPresenter.swift */,
+				FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */,
+				FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAA3F4A42B68C2B7004747D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4A62B68C36B004747D7 /* NoteEditViewController.swift */,
+				FAA3F4AE2B68C453004747D7 /* NoteEditViewInput.swift */,
+				FAA3F4B02B68C462004747D7 /* NoteEditViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA3F4A52B68C2BD004747D7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4AC2B68C3C3004747D7 /* NoteEditRouter.swift */,
+				FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,23 +375,32 @@
 			files = (
 				FA0C50712B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift in Sources */,
 				FA0C50402B63CA8A00E567D4 /* NoteListViewController.swift in Sources */,
+				FAA3F4B12B68C462004747D7 /* NoteEditViewOutput.swift in Sources */,
 				FAA3F4932B6705CB004747D7 /* NoteListDataModelInput.swift in Sources */,
 				FA0C50632B63D0C500E567D4 /* NoteListViewInput.swift in Sources */,
+				FAA3F4B32B68C4CB004747D7 /* NoteEditRouterInput.swift in Sources */,
 				FA0C503C2B63CA8A00E567D4 /* AppDelegate.swift in Sources */,
 				FA0C50742B657EE800E567D4 /* NoteCollectionViewCell.swift in Sources */,
+				FAA3F4B72B68C4F9004747D7 /* NoteEditModuleOutput.swift in Sources */,
 				FAA3F4992B680640004747D7 /* AddNoteAlertController.swift in Sources */,
 				FAA3F4A02B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift in Sources */,
 				FA0C503E2B63CA8A00E567D4 /* SceneDelegate.swift in Sources */,
+				FAA3F4AD2B68C3C3004747D7 /* NoteEditRouter.swift in Sources */,
 				FA0C506F2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift in Sources */,
+				FAA3F4AB2B68C3AD004747D7 /* NoteEditPresenter.swift in Sources */,
 				FAA3F4962B670B9F004747D7 /* CoreDataStack.swift in Sources */,
 				FA0C505B2B63D03C00E567D4 /* NoteListConfigurator.swift in Sources */,
 				FA0C50652B63D0D400E567D4 /* NoteListViewOutput.swift in Sources */,
 				FA0C50612B63D0A200E567D4 /* NoteListModuleInput.swift in Sources */,
 				FA0C50672B63D0EF00E567D4 /* NoteListRouterInput.swift in Sources */,
+				FAA3F4AF2B68C453004747D7 /* NoteEditViewInput.swift in Sources */,
 				FA0C505D2B63D04D00E567D4 /* NoteListRouter.swift in Sources */,
 				FAA3F49B2B680668004747D7 /* AddNoteAlertModuleOutput.swift in Sources */,
 				FAA3F49E2B68092C004747D7 /* AddNoteAlertModel.swift in Sources */,
+				FAA3F4A72B68C36B004747D7 /* NoteEditViewController.swift in Sources */,
 				FA0C505F2B63D06400E567D4 /* NoteListPresenter.swift in Sources */,
+				FAA3F4A92B68C38F004747D7 /* NoteEditModuleConfigurator.swift in Sources */,
+				FAA3F4B52B68C4EA004747D7 /* NoteEditModuleInput.swift in Sources */,
 				FA0C50692B63D16A00E567D4 /* NoteListModuleOutput.swift in Sources */,
 				FA0C50462B63CA8A00E567D4 /* NotesApp.xcdatamodeld in Sources */,
 				FA0C506C2B63D28700E567D4 /* NoteListPresenterModel.swift in Sources */,
