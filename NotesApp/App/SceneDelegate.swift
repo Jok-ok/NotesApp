@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  NotesApp
-//
-//  Created by Александр Воробей on 26.01.2024.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -18,7 +11,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
+        
         coreDataStack = CoreDataStack()
+        setupCoreDataFirstLaunch()
+        
         initializeRootView(with: scene)
     }
 
@@ -68,5 +64,17 @@ private extension SceneDelegate {
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+    
+    func setupCoreDataFirstLaunch() {
+        guard let coreDataStack = coreDataStack else {
+            print("CoreData error: can't get CoreDataStack or it's not initialised")
+            return
+        }
+        
+        if !UserDefaults.standard.bool(forKey: "notFirstLaunch") {
+            UserDefaults.standard.setValue(true, forKey: "notFirstLaunch")
+            NoteListDataModel.createGreetingsNote(with: coreDataStack.context)
+        }
     }
 }

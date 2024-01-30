@@ -59,3 +59,22 @@ final class NoteListDataModel: NoteListDataModelInput {
         }
     }
 }
+
+extension NoteListDataModel {
+    static func createGreetingsNote(with context: NSManagedObjectContext) {
+        guard let note = NSEntityDescription.insertNewObject(
+            forEntityName: "Note",
+            into: context) as? Note else { return }
+        note.text = "Добро пожаловть в NoteApp! Мы рады нашей встрече!"
+        note.title = "Привет!"
+        note.updatedAt = .now
+        
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Core Data error: \(error)")
+            }
+        }
+    }
+}
