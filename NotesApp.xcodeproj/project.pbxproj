@@ -22,6 +22,26 @@
 		FA0C50672B63D0EF00E567D4 /* NoteListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50662B63D0EF00E567D4 /* NoteListRouterInput.swift */; };
 		FA0C50692B63D16A00E567D4 /* NoteListModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50682B63D16A00E567D4 /* NoteListModuleOutput.swift */; };
 		FA0C506C2B63D28700E567D4 /* NoteListPresenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C506B2B63D28700E567D4 /* NoteListPresenterModel.swift */; };
+		FA0C506F2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C506E2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift */; };
+		FA0C50712B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50702B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift */; };
+		FA0C50742B657EE800E567D4 /* NoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0C50732B657EE800E567D4 /* NoteCollectionViewCell.swift */; };
+		FAA3F4912B6705B6004747D7 /* NoteListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4902B6705B6004747D7 /* NoteListDataModel.swift */; };
+		FAA3F4932B6705CB004747D7 /* NoteListDataModelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4922B6705CB004747D7 /* NoteListDataModelInput.swift */; };
+		FAA3F4962B670B9F004747D7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4952B670B9F004747D7 /* CoreDataStack.swift */; };
+		FAA3F4992B680640004747D7 /* AddNoteAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */; };
+		FAA3F49B2B680668004747D7 /* AddNoteAlertModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */; };
+		FAA3F49E2B68092C004747D7 /* AddNoteAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */; };
+		FAA3F4A02B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */; };
+		FAA3F4A72B68C36B004747D7 /* NoteEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4A62B68C36B004747D7 /* NoteEditViewController.swift */; };
+		FAA3F4A92B68C38F004747D7 /* NoteEditModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4A82B68C38F004747D7 /* NoteEditModuleConfigurator.swift */; };
+		FAA3F4AB2B68C3AD004747D7 /* NoteEditPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4AA2B68C3AD004747D7 /* NoteEditPresenter.swift */; };
+		FAA3F4AD2B68C3C3004747D7 /* NoteEditRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4AC2B68C3C3004747D7 /* NoteEditRouter.swift */; };
+		FAA3F4AF2B68C453004747D7 /* NoteEditViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4AE2B68C453004747D7 /* NoteEditViewInput.swift */; };
+		FAA3F4B12B68C462004747D7 /* NoteEditViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B02B68C462004747D7 /* NoteEditViewOutput.swift */; };
+		FAA3F4B32B68C4CB004747D7 /* NoteEditRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */; };
+		FAA3F4B52B68C4EA004747D7 /* NoteEditModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */; };
+		FAA3F4B72B68C4F9004747D7 /* NoteEditModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */; };
+		FAA3F4BB2B6927AD004747D7 /* NoteEditPresenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4BA2B6927AD004747D7 /* NoteEditPresenterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +62,27 @@
 		FA0C50662B63D0EF00E567D4 /* NoteListRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListRouterInput.swift; sourceTree = "<group>"; };
 		FA0C50682B63D16A00E567D4 /* NoteListModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListModuleOutput.swift; sourceTree = "<group>"; };
 		FA0C506B2B63D28700E567D4 /* NoteListPresenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListPresenterModel.swift; sourceTree = "<group>"; };
+		FA0C506E2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		FA0C50702B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewAdapterOutput.swift; sourceTree = "<group>"; };
+		FA0C50732B657EE800E567D4 /* NoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCell.swift; sourceTree = "<group>"; };
+		FAA3F4902B6705B6004747D7 /* NoteListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListDataModel.swift; sourceTree = "<group>"; };
+		FAA3F4922B6705CB004747D7 /* NoteListDataModelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListDataModelInput.swift; sourceTree = "<group>"; };
+		FAA3F4952B670B9F004747D7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertController.swift; sourceTree = "<group>"; };
+		FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModuleOutput.swift; sourceTree = "<group>"; };
+		FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteAlertModel.swift; sourceTree = "<group>"; };
+		FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCollectionViewCellDeleteDelegate.swift; sourceTree = "<group>"; };
+		FAA3F4A62B68C36B004747D7 /* NoteEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewController.swift; sourceTree = "<group>"; };
+		FAA3F4A82B68C38F004747D7 /* NoteEditModuleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleConfigurator.swift; sourceTree = "<group>"; };
+		FAA3F4AA2B68C3AD004747D7 /* NoteEditPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPresenter.swift; sourceTree = "<group>"; };
+		FAA3F4AC2B68C3C3004747D7 /* NoteEditRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditRouter.swift; sourceTree = "<group>"; };
+		FAA3F4AE2B68C453004747D7 /* NoteEditViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewInput.swift; sourceTree = "<group>"; };
+		FAA3F4B02B68C462004747D7 /* NoteEditViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditViewOutput.swift; sourceTree = "<group>"; };
+		FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditRouterInput.swift; sourceTree = "<group>"; };
+		FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleInput.swift; sourceTree = "<group>"; };
+		FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleOutput.swift; sourceTree = "<group>"; };
+		FAA3F4BA2B6927AD004747D7 /* NoteEditPresenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPresenterModel.swift; sourceTree = "<group>"; };
+		FAA3F4BC2B694A4F004747D7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +115,9 @@
 		FA0C503A2B63CA8A00E567D4 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
+				FAA3F4942B670B90004747D7 /* Support */,
 				FA0C50522B63CAA400E567D4 /* App */,
-				FA0C50542B63CADB00E567D4 /* Screens */,
+				FA0C50542B63CADB00E567D4 /* Modules */,
 				FA0C50532B63CACB00E567D4 /* Resources */,
 			);
 			path = NotesApp;
@@ -101,12 +143,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		FA0C50542B63CADB00E567D4 /* Screens */ = {
+		FA0C50542B63CADB00E567D4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				FA0C50592B63CB8400E567D4 /* NoteList */,
+				FAA3F4972B68060C004747D7 /* AddNoteAlert */,
+				FAA3F4A12B68C289004747D7 /* NoteEdit */,
 			);
-			path = Screens;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		FA0C50552B63CAEB00E567D4 /* Presenter */ = {
@@ -123,6 +167,7 @@
 		FA0C50562B63CAF800E567D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA0C506D2B657B4F00E567D4 /* NoteCollectionViewAdapter */,
 				FA0C503F2B63CA8A00E567D4 /* NoteListViewController.swift */,
 				FA0C50622B63D0C500E567D4 /* NoteListViewInput.swift */,
 				FA0C50642B63D0D400E567D4 /* NoteListViewOutput.swift */,
@@ -162,6 +207,110 @@
 			isa = PBXGroup;
 			children = (
 				FA0C506B2B63D28700E567D4 /* NoteListPresenterModel.swift */,
+				FAA3F4902B6705B6004747D7 /* NoteListDataModel.swift */,
+				FAA3F4922B6705CB004747D7 /* NoteListDataModelInput.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA0C506D2B657B4F00E567D4 /* NoteCollectionViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C50722B657ED200E567D4 /* NoteCollectionViewCell */,
+				FA0C506E2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift */,
+				FA0C50702B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift */,
+			);
+			path = NoteCollectionViewAdapter;
+			sourceTree = "<group>";
+		};
+		FA0C50722B657ED200E567D4 /* NoteCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA0C50732B657EE800E567D4 /* NoteCollectionViewCell.swift */,
+				FAA3F49F2B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift */,
+			);
+			path = NoteCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		FAA3F4942B670B90004747D7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4952B670B9F004747D7 /* CoreDataStack.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FAA3F4972B68060C004747D7 /* AddNoteAlert */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F49C2B68090C004747D7 /* Model */,
+				FAA3F4982B680640004747D7 /* AddNoteAlertController.swift */,
+				FAA3F49A2B680668004747D7 /* AddNoteAlertModuleOutput.swift */,
+			);
+			path = AddNoteAlert;
+			sourceTree = "<group>";
+		};
+		FAA3F49C2B68090C004747D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F49D2B68092C004747D7 /* AddNoteAlertModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAA3F4A12B68C289004747D7 /* NoteEdit */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4A22B68C2A6004747D7 /* Configurator */,
+				FAA3F4A32B68C2B1004747D7 /* Presenter */,
+				FAA3F4A52B68C2BD004747D7 /* Router */,
+				FAA3F4A42B68C2B7004747D7 /* View */,
+			);
+			path = NoteEdit;
+			sourceTree = "<group>";
+		};
+		FAA3F4A22B68C2A6004747D7 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4A82B68C38F004747D7 /* NoteEditModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		FAA3F4A32B68C2B1004747D7 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4B82B692788004747D7 /* Model */,
+				FAA3F4AA2B68C3AD004747D7 /* NoteEditPresenter.swift */,
+				FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */,
+				FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FAA3F4A42B68C2B7004747D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4A62B68C36B004747D7 /* NoteEditViewController.swift */,
+				FAA3F4AE2B68C453004747D7 /* NoteEditViewInput.swift */,
+				FAA3F4B02B68C462004747D7 /* NoteEditViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA3F4A52B68C2BD004747D7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4AC2B68C3C3004747D7 /* NoteEditRouter.swift */,
+				FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FAA3F4B82B692788004747D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4BA2B6927AD004747D7 /* NoteEditPresenterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,11 +352,12 @@
 			};
 			buildConfigurationList = FA0C50332B63CA8900E567D4 /* Build configuration list for PBXProject "NotesApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = FA0C502F2B63CA8900E567D4;
 			productRefGroup = FA0C50392B63CA8A00E567D4 /* Products */;
@@ -236,19 +386,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA3F4BB2B6927AD004747D7 /* NoteEditPresenterModel.swift in Sources */,
+				FA0C50712B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift in Sources */,
 				FA0C50402B63CA8A00E567D4 /* NoteListViewController.swift in Sources */,
+				FAA3F4B12B68C462004747D7 /* NoteEditViewOutput.swift in Sources */,
+				FAA3F4932B6705CB004747D7 /* NoteListDataModelInput.swift in Sources */,
 				FA0C50632B63D0C500E567D4 /* NoteListViewInput.swift in Sources */,
+				FAA3F4B32B68C4CB004747D7 /* NoteEditRouterInput.swift in Sources */,
 				FA0C503C2B63CA8A00E567D4 /* AppDelegate.swift in Sources */,
+				FA0C50742B657EE800E567D4 /* NoteCollectionViewCell.swift in Sources */,
+				FAA3F4B72B68C4F9004747D7 /* NoteEditModuleOutput.swift in Sources */,
+				FAA3F4992B680640004747D7 /* AddNoteAlertController.swift in Sources */,
+				FAA3F4A02B68317D004747D7 /* NoteCollectionViewCellDeleteDelegate.swift in Sources */,
 				FA0C503E2B63CA8A00E567D4 /* SceneDelegate.swift in Sources */,
+				FAA3F4AD2B68C3C3004747D7 /* NoteEditRouter.swift in Sources */,
+				FA0C506F2B657B6C00E567D4 /* NoteCollectionViewAdapter.swift in Sources */,
+				FAA3F4AB2B68C3AD004747D7 /* NoteEditPresenter.swift in Sources */,
+				FAA3F4962B670B9F004747D7 /* CoreDataStack.swift in Sources */,
 				FA0C505B2B63D03C00E567D4 /* NoteListConfigurator.swift in Sources */,
 				FA0C50652B63D0D400E567D4 /* NoteListViewOutput.swift in Sources */,
 				FA0C50612B63D0A200E567D4 /* NoteListModuleInput.swift in Sources */,
 				FA0C50672B63D0EF00E567D4 /* NoteListRouterInput.swift in Sources */,
+				FAA3F4AF2B68C453004747D7 /* NoteEditViewInput.swift in Sources */,
 				FA0C505D2B63D04D00E567D4 /* NoteListRouter.swift in Sources */,
+				FAA3F49B2B680668004747D7 /* AddNoteAlertModuleOutput.swift in Sources */,
+				FAA3F49E2B68092C004747D7 /* AddNoteAlertModel.swift in Sources */,
+				FAA3F4A72B68C36B004747D7 /* NoteEditViewController.swift in Sources */,
 				FA0C505F2B63D06400E567D4 /* NoteListPresenter.swift in Sources */,
+				FAA3F4A92B68C38F004747D7 /* NoteEditModuleConfigurator.swift in Sources */,
+				FAA3F4B52B68C4EA004747D7 /* NoteEditModuleInput.swift in Sources */,
 				FA0C50692B63D16A00E567D4 /* NoteListModuleOutput.swift in Sources */,
 				FA0C50462B63CA8A00E567D4 /* NotesApp.xcdatamodeld in Sources */,
 				FA0C506C2B63D28700E567D4 /* NoteListPresenterModel.swift in Sources */,
+				FAA3F4912B6705B6004747D7 /* NoteListDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +429,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA0C504A2B63CA8B00E567D4 /* Base */,
+				FAA3F4BC2B694A4F004747D7 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -271,6 +442,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -334,6 +506,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -395,10 +568,12 @@
 				DEVELOPMENT_TEAM = 2A8FN782JR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesApp/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,10 +597,12 @@
 				DEVELOPMENT_TEAM = 2A8FN782JR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesApp/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
