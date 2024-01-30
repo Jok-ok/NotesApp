@@ -14,4 +14,6 @@ protocol NoteListViewOutput {
     func deleteNoteButtonTap(_ note: Note)
     
     func deleteNotesButtonDidTap()
+    
+    func collectionViewItemsBecomeEmpty()
 }

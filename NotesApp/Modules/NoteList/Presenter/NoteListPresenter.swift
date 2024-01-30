@@ -7,7 +7,7 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
     var model: NoteListDataModel?
     
     // MARK: - Private properties
-    private var noteEditingMode = false
+    private var noteDeletingMode = false
     private var ascendingOrder = false
     
     // MARK: - NoteListViewOutput
@@ -41,8 +41,13 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
     }
     
     func deleteNotesButtonDidTap() {
-        noteEditingMode.toggle()
-        view?.setCollectionViewToDeleteMode(noteEditingMode)
+        noteDeletingMode.toggle()
+        view?.setCollectionViewToDeleteMode(noteDeletingMode)
+    }
+    
+    func collectionViewItemsBecomeEmpty() {
+        noteDeletingMode = false
+        view?.setCollectionViewToDeleteMode(noteDeletingMode)
     }
 }
 
@@ -54,6 +59,7 @@ extension NoteListPresenter: AddNoteAlertModuleOutput {
     }
 }
 
+// MARK: - 
 extension NoteListPresenter: NoteEditModuleOutput {
     func noteEdited() {
         model?.saveChanges()
