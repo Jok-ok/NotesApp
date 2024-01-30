@@ -51,9 +51,10 @@ private extension NoteEditViewController {
     
     func configureNavigationController(with title: String) {
         self.title = title
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
-                                                            target: self,
-                                                            action: #selector(doneButtonDidTap))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: self,
+            action: #selector(doneButtonDidTap))
     }
     
     func configureNoteTitleTextfield(with placeholder: String) {
