@@ -40,10 +40,22 @@ final class NoteListDataModel: NoteListDataModelInput {
     
     func deleteNote(_ note: Note) {
         context.delete(note)
-        do {
-            try context.save()
-        } catch let error as NSError {
-            print("Core Data error: \(error)")
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Core Data error: \(error)")
+            }
+        }
+    }
+    
+    func saveChanges() {
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Core Data error: \(error)")
+            }
         }
     }
 }

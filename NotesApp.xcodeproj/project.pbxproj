@@ -41,6 +41,7 @@
 		FAA3F4B32B68C4CB004747D7 /* NoteEditRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */; };
 		FAA3F4B52B68C4EA004747D7 /* NoteEditModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */; };
 		FAA3F4B72B68C4F9004747D7 /* NoteEditModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */; };
+		FAA3F4BB2B6927AD004747D7 /* NoteEditPresenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3F4BA2B6927AD004747D7 /* NoteEditPresenterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditRouterInput.swift; sourceTree = "<group>"; };
 		FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleInput.swift; sourceTree = "<group>"; };
 		FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditModuleOutput.swift; sourceTree = "<group>"; };
+		FAA3F4BA2B6927AD004747D7 /* NoteEditPresenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditPresenterModel.swift; sourceTree = "<group>"; };
+		FAA3F4BC2B694A4F004747D7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +280,7 @@
 		FAA3F4A32B68C2B1004747D7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				FAA3F4B82B692788004747D7 /* Model */,
 				FAA3F4AA2B68C3AD004747D7 /* NoteEditPresenter.swift */,
 				FAA3F4B42B68C4EA004747D7 /* NoteEditModuleInput.swift */,
 				FAA3F4B62B68C4F9004747D7 /* NoteEditModuleOutput.swift */,
@@ -301,6 +305,14 @@
 				FAA3F4B22B68C4CB004747D7 /* NoteEditRouterInput.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		FAA3F4B82B692788004747D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3F4BA2B6927AD004747D7 /* NoteEditPresenterModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,11 +352,12 @@
 			};
 			buildConfigurationList = FA0C50332B63CA8900E567D4 /* Build configuration list for PBXProject "NotesApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = FA0C502F2B63CA8900E567D4;
 			productRefGroup = FA0C50392B63CA8A00E567D4 /* Products */;
@@ -373,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA3F4BB2B6927AD004747D7 /* NoteEditPresenterModel.swift in Sources */,
 				FA0C50712B657C3D00E567D4 /* NoteCollectionViewAdapterOutput.swift in Sources */,
 				FA0C50402B63CA8A00E567D4 /* NoteListViewController.swift in Sources */,
 				FAA3F4B12B68C462004747D7 /* NoteEditViewOutput.swift in Sources */,
@@ -415,6 +429,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA0C504A2B63CA8B00E567D4 /* Base */,
+				FAA3F4BC2B694A4F004747D7 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -427,6 +442,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -490,6 +506,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -551,6 +568,7 @@
 				DEVELOPMENT_TEAM = 2A8FN782JR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesApp/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -579,6 +597,7 @@
 				DEVELOPMENT_TEAM = 2A8FN782JR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesApp/App/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

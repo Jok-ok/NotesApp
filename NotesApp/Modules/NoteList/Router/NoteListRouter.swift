@@ -3,8 +3,9 @@ import UIKit
 final class NoteListRouter: NoteListRouterInput {
     weak var view: UIViewController?
     
-    func showNoteDetailModule() {
-        
+    func showNoteDetailModule(with note: Note, output: NoteEditModuleOutput) {
+        let nextModuleView = NoteEditModuleConfigurator().configure(with: note, output: output)
+        view?.navigationController?.pushViewController(nextModuleView, animated: true)
     }
     
     func showAddNoteAlertModule(output: AddNoteAlertModuleOutput) {
@@ -14,6 +15,6 @@ final class NoteListRouter: NoteListRouterInput {
     }
     
     func showDeleteNoteAlert() {
-//        let alertController = UIAlertController(
+        //
     }
 }

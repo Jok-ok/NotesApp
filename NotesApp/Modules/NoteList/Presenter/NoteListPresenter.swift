@@ -23,7 +23,7 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
     }
     
     func noteDidTap(_ note: Note) {
-        router?.showNoteDetailModule()
+        router?.showNoteDetailModule(with: note, output: self)
     }
     
     func toggleSortInAscendingOrder() {
@@ -50,6 +50,15 @@ final class NoteListPresenter: NoteListViewOutput, NoteListModuleInput {
 extension NoteListPresenter: AddNoteAlertModuleOutput {
     func addNote(with title: String) {
         model?.addNote(title: title, text: "", updatedAt: .now)
+        fetchNotes()
+    }
+}
+
+extension NoteListPresenter: NoteEditModuleOutput {
+    func noteEdited() {
+        model?.saveChanges()
+    }
+    func noteEditingEnded() {
         fetchNotes()
     }
 }
